@@ -93,6 +93,8 @@ body {
     top: -8px;
     font-size: 40px;
     margin-right: 10px;
+    height: 70px;
+    width: 70px;
   }
   
   .current-temperature-value {
