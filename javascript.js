@@ -1,3 +1,8 @@
+window.onload = function () {
+    searchCity("chicago");
+  };
+
+
 function updateWeather(response){
     let maintemperature = document.querySelector("#current-temperature");
     let maintemperatureresponse = response.data.temperature.current;
@@ -50,4 +55,4 @@ searchCity(searchInput.value);
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", submitCity);
 
-searchCity ("chicago");
+
