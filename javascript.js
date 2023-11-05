@@ -1,5 +1,4 @@
 function updateWeather(response){
-    console.log(response.data.temperature.current);
     let maintemperature = document.querySelector("#current-temperature");
     let maintemperatureresponse = response.data.temperature.current;
     let cityElement = document.querySelector("#current-city");
@@ -9,28 +8,29 @@ function updateWeather(response){
     let humidityElement = document.querySelector("#current-humidity");
     let mainwindresponse = response.data.wind.speed;
     let windElement = document.querySelector("#current-wind");
-    let currentDate = new Date();
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let currentDay = days[currentDate.getDay()]; 
-    let currentMonth = months[currentDate.getMonth()]; 
-    let currentDayElement = document.querySelector("#current-day"); 
-    let mainDateElement = document.querySelector("#main-date"); 
+    let iconresponse= `<img class="current-temperature-icon" src="${response.data.condition.icon_url}" alt=""/>`;
+    let iconElement = document.querySelector("#icon");
 
-    mainDateElement.innerHTML = `${currentDay}, ${currentMonth} ${currentDate.getDate()}`;
-    currentDayElement.innerHTML = currentDate.getDate();
+    iconElement.innerHTML = iconresponse;
     cityElement.innerHTML = response.data.city;
     maintemperature.innerHTML= Math.round(response.data.temperature.current);
     descriptionElement.innerHTML = maindescriptionresponse;
     humidityElement.innerHTML = mainhumidityresponse;
     windElement.innerHTML = mainwindresponse;
 
-
+    displayCurrentDate();
 
 }
 
-
-
+function displayCurrentDate() {
+    let currentDate = new Date();
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let currentDay = days[currentDate.getDay()];
+    let currentMonth = months[currentDate.getMonth()];
+    let currentDayElement = document.querySelector("#main-date");
+    currentDayElement.innerHTML = `${currentDay}, ${currentMonth} ${currentDate.getDate()}`;
+}
 
 function searchCity (city) {
     let apiKey = "48o09f8bd70526135tc75884bbfc65a3";
