@@ -81,7 +81,26 @@ body {
   .current-details strong {
     color: #BDC8F6;
   }
+
+  .current-details #current-humidity {
+    color: #BDC8F6;
+   font-weight: bolder;
   
+  }
+
+  .current-details #current-wind {
+    color: #BDC8F6;
+   font-weight: bolder;
+  
+  }
+
+  .current-details #current-description {
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
   .current-temperature-icon {
     position: relative;
     top: -8px;
