@@ -1,3 +1,8 @@
+* {
+  box-sizing: content-box;
+}
+
+
 body {
     background: #f9f7fe;
     font-family: "Roboto", sans-serif;
@@ -21,7 +26,6 @@ body {
   }
   
   header {
-    border-bottom: 1px solid #f9f7fe;
     padding-bottom: 30px;
   }
   
@@ -134,14 +138,33 @@ body {
     --bs-gutter-x: 0rem;
   }
 
+  .forecast-day{
+
+  }
+
+  .current-forecast-icon{
+    width: 85px;
+  
+  }
+
+  #forecast-min{
+
+  }
+
+  #forecast-max{
+
+  }
+
   #name {
     color: #BDC8F6;;
   }
   
   footer {
-    border-top: 1px solid #f9f7fe;
     text-align: center;
     padding-top: 15px;
+    margin-top: 20px;
+    
+
   
     color: rgba(39, 33, 66, 0.4);
   }
