@@ -123,6 +123,18 @@ body {
     color: #BDC8F6;
   }
 
+  .current-forecast{
+    margin-top: 20px;
+    text-align: center;
+    color: #BDC8F6;
+    font-weight: bold;
+  }
+
+
+  .temperature-forecast{
+    font-size: ;
+  }
+
   #name {
     color: #BDC8F6;;
   }

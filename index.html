@@ -16,7 +16,8 @@
 </head>
 <body>
     <div class="weather-app">
-        <header>
+        
+      <header>
           <form id="search-form">
             <input
               type="search"
@@ -27,10 +28,12 @@
             />
             <input type="submit" value="Search" class="search-button" id="search-submit" />
           </form>
-        </header>
+      </header>
+
         <main>
           <div class="current-weather">
-            <div>
+
+            <div class="">
               <h1 class="current-city" id="current-city">Chicago</h1>
               <p class="current-details">
                 <span id="main-date">
@@ -41,6 +44,7 @@
                 <span id="current-description"></span>
               </p>
             </div>
+
             <div class="current-temperature">
               <span id="icon">
               <img class="current-temperature-icon" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt=""/>
@@ -48,9 +52,44 @@
               <span class="current-temperature-value" id="current-temperature"
                 ></span
               ><span class="current-temperature-unit">°C</span>
-            </div>
+            </div>  
+
           </div>
+            
+            <div class="current-forecast">
+              <div class="row justify-content-evenly">
+
+                <div class="col-2" id="column-one">
+                  <span id="day-one"> Sunday</span>
+                  <img class="current-temperature-icon" id="icon-one" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt=""/>
+                  <span id="min-one" class="temperature-forecast" >17</span>°<span id="max-one" class="temperature-forecast"  > 22</span>°
+                </div>
+                <div class="col-2" id="column-two">
+                  <span  id="day-two"> Monday</span>
+                  <img class="current-temperature-icon" id="icon-two" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt=""/>
+                  <span id="min-two" class="temperature-forecast"  >17</span>°<span id="max-two" class="temperature-forecast"> 22</span>°
+                </div>
+                <div class="col-2" id="column-three">
+                  <span  id="day-three"> Tuesday</span>
+                  <img class="current-temperature-icon" id="icon-three" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt=""/>
+                  <span id="min-three" class="temperature-forecast"  >17</span>°<span id="max-three" class="temperature-forecast"> 22</span>°
+                </div>
+                <div class="col-2" id="column-four">
+                  <span  id="day-four"> Wednesday</span>
+                  <img class="current-temperature-icon" id="icon-four" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt=""/>
+                  <span id="min-four" class="temperature-forecast">17</span>°<span id="max-four" class="temperature-forecast"> 22</span>°
+                </div>
+
+
+
+
+              </div>
+            </div>
+
+
+          
         </main>
+
         <footer>
           <p>
             <a href="#" target="_blank">Open source code</a> by
@@ -58,7 +97,8 @@
             <a href="#" target="_blank">Netlify</a>
           </p>
         </footer>
-      </div>
+
+    </div>
     <script src="javascript.js"> </script>
 </body>
 </html>
