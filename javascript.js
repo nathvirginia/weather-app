@@ -1,7 +1,8 @@
 window.onload = function () {
     searchCity("chicago");
   };
-
+  
+  /*getForecast (response.data.city);*/
 
 function updateWeather(response){
     let maintemperature = document.querySelector("#current-temperature");
@@ -24,6 +25,7 @@ function updateWeather(response){
     windElement.innerHTML = mainwindresponse;
 
     displayCurrentDate();
+    getForecast (response.data.city);
 
 }
 
@@ -52,7 +54,16 @@ let searchInput = document.querySelector("#search-input");
 searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+    let apiKey = "48o09f8bd70526135tc75884bbfc65a3";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+
+    console.log(response.data);
+
     let forecast = document.querySelector("#forecast");
 
     let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
@@ -70,4 +81,4 @@ function displayForecast() {
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", submitCity);
 
-displayForecast();
+
