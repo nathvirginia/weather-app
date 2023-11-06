@@ -52,7 +52,22 @@ let searchInput = document.querySelector("#search-input");
 searchCity(searchInput.value);
 }
 
+function displayForecast() {
+    let forecast = document.querySelector("#forecast");
+
+    let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+
+    days.forEach(function (day) {
+        forecast.innerHTML += 
+        `<div id="forecast-column">
+            <span id="forecast-day">${day}</span>
+            <img class="current-temperature-icon" id="forecast-icon" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt=""/>
+            <span id="forecast-min" class="temperature-forecast">17</span>°<span id="forecast-max" class="temperature-forecast"> 22</span>°
+        </div>`;
+    });
+}
+
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", submitCity);
 
-
+displayForecast();

@@ -128,11 +128,10 @@ body {
     text-align: center;
     color: #BDC8F6;
     font-weight: bold;
-  }
-
-
-  .temperature-forecast{
-    font-size: ;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    --bs-gutter-x: 0rem;
   }
 
   #name {
@@ -147,3 +146,4 @@ body {
     color: rgba(39, 33, 66, 0.4);
   }
   
+                
