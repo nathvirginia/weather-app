@@ -2,7 +2,7 @@ window.onload = function () {
     searchCity("chicago");
   };
   
-  /*getForecast (response.data.city);*/
+ 
 
 function updateWeather(response){
     let maintemperature = document.querySelector("#current-temperature");
