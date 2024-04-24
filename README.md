@@ -18,6 +18,16 @@ https://weather-app-api-project1.netlify.app/
 - Axios (for making API requests)
 - Bootstrap (for styling)
 
+## Skills Demonstrated
+
+- Front-end Web Development: Utilized HTML, CSS, and JavaScript to create an intuitive user interface.
+- Asynchronous Programming: Employed Axios for making asynchronous API requests and handling responses seamlessly.
+- DOM Manipulation: Dynamically updated the Document Object Model (DOM) based on retrieved API data.
+- API Integration: Integrated the OpenWeatherMap API to fetch and display real-time weather data.
+- Error Handling: Implemented robust error handling mechanisms to manage API request and response errors gracefully.
+- Version Control: Utilized Git for efficient version control, enabling collaborative development and project management.
+- Deployment: Hosted the project on Netlify, ensuring accessibility and availability to users worldwide.
+
 ## Features
 
 - Users can search for weather information by entering a location.
